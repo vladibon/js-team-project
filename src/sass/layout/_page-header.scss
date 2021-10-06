@@ -1,0 +1,37 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: $accent-color;
+  box-shadow: $card-shadow;
+}
+
+.page-header__container {
+  @include respond-above($tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-header__control {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond-above($tablet) {
+    width: 502px;
+  }
+
+  @include respond-above($desktop) {
+    width: 718px;
+  }
+}
+
+.logo {
+  @include respond-below($tablet) {
+    display: block;
+    margin-bottom: 6px;
+  }
+}

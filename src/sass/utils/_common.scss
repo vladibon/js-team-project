@@ -1,0 +1,35 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+
+  &.light-theme {
+    background-color: $white-bg-color;
+    color: $dark-text-color;
+  }
+
+  &.dark-theme {
+    background-color: $dark-bg-color;
+    color: $white-text-color;
+  }
+}
+
+main {
+  padding-top: 104px;
+  padding-bottom: 20px;
+
+  @include respond-above($tablet) {
+    padding-top: 70px;
+  }
+}
