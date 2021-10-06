@@ -1,6 +1,8 @@
 .form {
   margin-right: auto;
   margin-left: auto;
+  display: block;
+  //   text-align: center;
 }
 
 .form__input {
@@ -11,6 +13,7 @@
   padding: 7px 20px;
   margin-right: 16px;
 
+  font-family: 'Nunito', sans-serif;
   font-size: 22px;
 }
 
@@ -23,6 +26,7 @@
   border-radius: 12px;
   color: $white-text-color;
 
+  font-family: 'Nunito', sans-serif;
   font-size: 22px;
   font-weight: 700;
 

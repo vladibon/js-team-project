@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Page Header  -->
     <%= require('html-loader!./partials/page-header.html').default %>
 
     <main>
+      <!-- Search form -->
       <%= require('html-loader!./partials/search-form.html').default %>
       <!-- Page footer  -->
       <%= require('html-loader!./partials/footer.html').default %>
