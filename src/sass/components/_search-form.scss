@@ -1,0 +1,42 @@
+.form {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form__input {
+  width: 400px;
+  height: 40px;
+  border: 2px solid $accent-color;
+  border-radius: 12px;
+  padding: 7px 20px;
+  margin-right: 16px;
+
+  font-size: 22px;
+}
+
+.form__btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: $gray-bg-color;
+  padding: 9px 22px;
+  border: none;
+  border-radius: 12px;
+  color: $white-text-color;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  transform: scale(1);
+  transition: transform $animation, background-color $animation, color $animation;
+}
+
+.form__btn:hover {
+  background-color: $accent-color;
+  color: $dark-text-color;
+
+  transform: scale(1.02);
+}
+
+.btn-append {
+  margin-left: 8px;
+}
