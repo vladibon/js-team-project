@@ -10,6 +10,10 @@
     <!-- Page Header  -->
     <%= require('html-loader!./partials/page-header.html').default %>
 
-    <main><%= require('html-loader!./partials/search-form.html').default %></main>
+    <main>
+      <%= require('html-loader!./partials/search-form.html').default %>
+      <!-- Page footer  -->
+      <%= require('html-loader!./partials/footer.html').default %>
+    </main>
   </body>
 </html>
