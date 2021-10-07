@@ -6,8 +6,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
     path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
+    filename: 'js/[name].[contenthash].js',
   },
   module: {
     rules: [
@@ -25,26 +26,29 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
         },
       },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: 'asset/inline',
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({ template: 'src/index.html' }),
-    new MiniCssExtractPlugin({ filename: 'styles.css' }),
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].[contenthash].css',
+      chunkFilename: '[id].css',
+    }),
     new CleanWebpackPlugin(),
   ],
   devServer: {
-    client: {
-      logging: 'none',
-    },
     hot: false,
     compress: true,
     port: 7777,
-    // open: true,
   },
 };
