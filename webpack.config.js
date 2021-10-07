@@ -39,8 +39,12 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   devServer: {
-    // open: true,
+    client: {
+      logging: 'none',
+    },
+    hot: false,
     compress: true,
     port: 7777,
+    // open: true,
   },
 };
